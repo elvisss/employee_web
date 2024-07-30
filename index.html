@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Employee Management</title>
+  </head>
+  <body>
+    <div class="container pt-5">
+      <div class="d-flex align-items-center justify-content-between">
+        <h1>Employees</h1>
+        <button id="add-employee-btn" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#createEmployeeModal">Create Employee</button>
+      </div>
+
+      <table id="employees-table" class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Create Modal -->
+    <div class="modal fade" id="createEmployeeModal" tabindex="-1" aria-labelledby="createEmployeeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="createEmployeeModalLabel">Create Employee</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="firstName_create" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName_create">
+            </div>
+            <div class="mb-3">
+              <label for="lastName_create" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName_create">
+            </div>
+            <div class="mb-3">
+              <label for="email_create" class="form-label">Last Name</label>
+              <input type="email" class="form-control" id="email_create">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="confirm-create-button" type="button" data-bs-dismiss="modal" class="btn btn-primary">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Update Modal -->
+    <div class="modal fade" id="updateEmployeeModal" tabindex="-1" aria-labelledby="updateEmployeeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="updateEmployeeModalLabel">Update Employee</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="firstName_update" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName_update">
+            </div>
+            <div class="mb-3">
+              <label for="lastName_update" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName_update">
+            </div>
+            <div class="mb-3">
+              <label for="email_update" class="form-label">Last Name</label>
+              <input type="email" class="form-control" id="email_update">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="confirm-update-button" type="button" data-bs-dismiss="modal" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteEmployeeModal" tabindex="-1" aria-labelledby="deleteEmployeeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="deleteEmployeeModalLabel">Delete Employee</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button id="confirm-delete-button" type="button" data-bs-dismiss="modal" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/services.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
